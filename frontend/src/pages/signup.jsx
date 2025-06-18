@@ -266,7 +266,7 @@ const Signup = () => {
             )}
           </div>
 
-          {/* Email Address */}
+          {/* Email Addr                                          ess */}
           <div className="form-group">
             <label htmlFor="email">Email Address *</label>
             <input
