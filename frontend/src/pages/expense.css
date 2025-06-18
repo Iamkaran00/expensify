@@ -1,0 +1,404 @@
+.expenseContainer{
+     color: black;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  align-items: start;
+  flex-direction: row;
+  gap: 1.2rem;
+  height: 100vh;
+  width: 100vw;
+}
+.right-div-expense{
+     width: 81%;
+  padding-top: 1rem;
+  display: flex;
+  background-color: #ffa7f2;
+  text-align: center;
+  justify-content: start;
+  padding-bottom: 1rem;
+  overflow-y: auto;
+  flex-direction: column;
+  height: 100%;
+}
+.formandchartexpense{
+width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.expense-box{
+  height:fit-content;
+  width:40%;
+  gap:0.5rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+.expense-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+ background-color: #fa243d;
+  flex-direction: column;
+  padding:1rem;
+  border-radius: 9px;
+  min-height: 26rem;
+}
+form{
+    display: flex;
+  align-items: start;
+  width:100%;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 26rem;
+}
+.inputdivs{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  min-height: 6rem;
+  justify-content: center;
+  height: fit-content;
+  width: 100%;
+}
+label {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+.inputdivs > input {
+  width: 100%;
+  height: 2.4rem;
+  background-color: rgb(255, 102, 102);
+  padding: 1.2rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
+  transition: all 0.2s linear;
+}
+.inputdivs > input:hover {
+  transform: scale(1.02);
+}
+.inputdivs > input::placeholder {
+  color: rgb(255, 255, 255);
+  opacity: 1;
+}
+.total-expense{
+ background-color: #fa243d;
+  height: 10rem;
+  display: flex;
+  border-radius: 10px;
+  padding: 2rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transition: all 0.3s linear;
+}
+.total-expense:hover {
+  transform: scale(1.03);
+   
+  background-color: #ff0000;
+  border: 2px solid rgb(255, 255, 255);
+}
+.dowhitess {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+.selecttagexpense {
+ background-color: rgb(255, 102, 102);
+  border-style: none;
+  height: 2.5rem;
+  padding: 9px;
+  color: rgb(255, 255, 255);
+  border-radius: 30px;
+  width: 13rem;
+  font-size: 1.2rem;
+}
+ 
+.submit-expense-button{
+  width:100%;
+  background-color: rgb(199, 16, 16);
+  height:3rem;
+  border-radius:10px;
+  transition: transform 0.2s linear;
+  border-style:none;
+  font-size:1.2rem;
+}
+.submit-expense-button:hover{
+  transform: scale(1.05);
+  background-color: #7c1313;
+}
+.error-message{
+  font-size:1.2rem;
+  color:rgb(88, 0, 0);
+}
+.allexpense{
+  width:100%;
+  height:fit-content;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding:2rem;
+  gap:2rem;
+  justify-content: center;
+}
+.insideallexpense{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  gap: 1.4rem;
+}
+.expenseinfobox{
+    min-height: 8rem;
+  padding: 1rem;
+  flex-direction: column;
+  gap: 1rem;text-align: start;
+  border-radius: 20px;
+  min-width: 18rem;
+  background-color: #ff0000;
+  color: white;
+  overflow: hidden;
+  transition: all 0.4s linear;
+}
+.expenseinfobox:hover{
+   background-color: #fc4444;
+   transform: scale(1.04);
+}
+.iconsandtitle{
+  width:100%;
+  display: flex;
+  align-items:center;
+  color:white;
+  justify-content: start;
+  gap:1rem;
+}
+.iconsandtitle>p{
+  color:white;
+  font-size:1.3rem;
+}
+.dowhitess{
+    font-size: 2.2rem;
+  color: rgb(255, 255, 255);
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 620px) {
+  .expenseContainer {
+    gap: 0.4rem;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .right-div-expense {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .formandchartexpense {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .expense-box {
+    width: 80%;
+  }
+
+  .total-expense {
+    width: 100%;
+    max-width: 300px;
+    height: 8rem;
+    padding: 1rem;
+  }
+
+  .expense-form {
+    width:80%;
+    padding: 1rem;
+    min-height: 24rem;
+  }
+
+  form {
+    min-height: 24rem;
+  }
+
+  .inputdivs {
+    min-height: 5rem;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  .inputdivs > input {
+    height: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .selecttagexpense {
+    height: 2.2rem;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 6px;
+  }
+
+  .submit-expense-button {
+    height: 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  .dowhitess {
+    font-size: 1.8rem;
+  }
+
+  .allexpense {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .insideallexpense {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .expenseinfobox {
+  
+    max-width:12rem;
+    min-height: 7rem;
+  }
+
+  .iconsandtitle > p {
+    font-size: 1.2rem;
+  }
+
+  .error-message {
+    font-size: 1.1rem;
+  }
+}
+
+@media(min-width: 620px) and (max-width: 780px) {
+  .expenseContainer {
+    gap: 0.4rem;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .right-div-expense {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .formandchartexpense {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .expense-box {
+    width: 80%;
+  }
+
+  .total-expense {
+    width: 100%;
+    height: 9rem;
+    padding: 1.5rem;
+  }
+
+  .expense-form {
+    width: 100%;
+    padding: 1.5rem;
+    min-height: 25rem;
+  }
+
+  form {
+    min-height: 25rem;
+  }
+
+  .inputdivs {
+    min-height: 5.5rem;
+  }
+
+  .selecttagexpense {
+    width: 100%;
+    max-width: 15rem;
+  }
+
+  .allexpense {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .insideallexpense {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .expenseinfobox {
+    width: 16rem;
+    flex: 1 1 calc(50% - 0.6rem);
+    max-width: calc(50% - 0.6rem);
+  }
+}
+
+@media(min-width: 781px) and (max-width: 1000px) {
+  .right-div-expense {
+    width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .formandchartexpense {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .expense-box {
+    width: 80%;
+  }
+
+  .total-expense {
+    width: 85%;
+    
+  }
+
+  .expense-form {
+    width: 85%;
+    max-width:45rem;
+  }
+
+  .allexpense {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .insideallexpense {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .expenseinfobox {
+    min-width: 16rem;
+    flex: 1 1 calc(33.333% - 0.8rem);
+    max-width: calc(33.333% - 0.8rem);
+  }
+}

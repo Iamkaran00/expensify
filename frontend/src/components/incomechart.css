@@ -1,0 +1,52 @@
+.chart-container-income {
+  width: 43rem;
+  height: 28rem;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1), 0 0 12px rgba(49, 130, 206, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 580px) {
+  .chart-container-income {
+    width: 30rem;
+    height: 18rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    margin: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 6px rgba(49, 130, 206, 0.15);
+  }
+}
+
+@media (min-width: 581px) and (max-width: 780px) {
+  .chart-container-income {
+    width: 35rem;
+    height: 20rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin: 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09), 0 0 8px rgba(49, 130, 206, 0.18);
+  }
+}
+
+@media (min-width: 781px) and (max-width: 990px) {
+  .chart-container-income {
+    width: 38rem;
+    height: 24rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 991px) {
+  .chart-container-income {
+    width: 43rem;
+    height: 28rem;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    margin: 0;
+  }
+}

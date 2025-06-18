@@ -1,0 +1,13 @@
+.notfoundcontainer{
+    height:100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-color: antiquewhite;
+}
+.imgnotfound{
+    border-radius: 40px;
+ height:35rem;
+    box-shadow: 2px 2px 2px 2px rgb(156, 154, 154);
+}

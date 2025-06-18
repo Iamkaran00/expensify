@@ -1,0 +1,209 @@
+.signincontainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+  background-color: antiquewhite;
+  box-sizing: border-box;
+}
+
+.form-groups {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signinform {
+  height: 29rem;
+  width: 23rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 1rem;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgb(186, 184, 184);
+  padding: 1rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.error-message {
+  color: red;
+}
+
+.inputsign {
+  height: 2.5rem;
+  background-color: white;
+  border-style: none;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  color: rgb(72, 71, 71);
+  padding: 12px 15px;
+  font-size: 1.1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inputsign:focus {
+  outline: none;
+  transition: all 0.3s linear;
+  border-color: #007bff;
+}
+
+.submit-btn-signin {
+  width: 100%;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  height: 3rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.error-messages {
+  font-size: 12px;
+  color: red;
+}
+
+.submit-btn-signin:hover {
+  background: #0056b3;
+}
+
+.submit-btn-signin:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.signin-img {
+  height: 700px;
+  width: 700px;
+  object-fit: contain;
+}
+
+@media (max-width: 620px) {
+  .signincontainer {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    height: 100vh;
+    min-height: fit-content;
+    overflow-y: auto;
+  }
+  
+  .signin-img {
+    height: 300px;
+    width: 300px;
+  }
+  
+  .signinform {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    min-height: 25rem;
+    padding: 1.5rem;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submit-btn-signin {
+    font-size: 1.1rem;
+    height: 2.5rem;
+  }
+  
+  .inputsign {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+}
+
+@media (min-width: 621px) and (max-width: 780px) {
+  .signincontainer {
+    flex-direction: column;
+    gap: 3rem;
+    height: 100vh;
+    min-height: fit-content;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  .signin-img {
+    height: 400px;
+    width: 400px;
+  }
+  
+  .signinform {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    min-height: 27rem;
+    padding: 2rem;
+  }
+  
+  .submit-btn-signin {
+    font-size: 1.2rem;
+    height: 2.8rem;
+  }
+  
+  .inputsign {
+    font-size: 1.05rem;
+    padding: 10px 14px;
+  }
+}
+
+@media (min-width: 781px) and (max-width: 1000px) {
+  .signincontainer {
+    gap: 5rem;
+    height: 100vh;
+    min-height: fit-content;
+    padding: 2rem;
+  }
+  
+  .signin-img {
+    height: 450px;
+    width: 450px;
+  }
+  
+  .signinform {
+    width: 23rem;
+    height: auto;
+    min-height: 29rem;
+    padding: 2rem;
+  }
+  
+  .submit-btn-signin {
+    font-size: 1.2rem;
+    height: 2.8rem;
+  }
+  
+  .inputsign {
+    font-size: 1.05rem;
+    padding: 10px 14px;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .signincontainer {
+    gap: 8rem;
+  }
+  
+  .signin-img {
+    height: 550px;
+    width: 550px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .signincontainer {
+    gap: 12rem;
+  }
+  
+  .signin-img {
+    height: 600px;
+    width: 600px;
+  }
+}

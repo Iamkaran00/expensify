@@ -1,0 +1,137 @@
+/* === Base Styles === */
+.homecontainer {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 100vw;
+}
+
+.imgandpara {
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paragraph {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  text-align: start;
+}
+
+.home-img {
+  height: 45rem;
+  width: 45rem;
+}
+
+.btns {
+  background-color: rgb(203, 18, 132);
+  height: 3rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  gap: 0.7rem;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  width: 13rem;
+  transition: transform 0.2s linear;
+}
+
+.btns:hover {
+  transform: scale(1.07);
+}
+
+/* === Media Queries === */
+
+/* 📱 Extra Small: max-width 620px */
+@media (max-width: 620px) {
+  .imgandpara {
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .paragraph {
+    align-items: center;
+    text-align: center;
+  }
+
+  .btns {
+    height: 2.3rem;
+    font-size: 1rem;
+    padding: 2px;
+    margin: auto;
+  }
+
+  .home-img {
+    height: 25rem;
+    width: 25rem;
+  }
+}
+
+@media (min-width: 621px) and (max-width: 780px) {
+  .homecontainer{
+    height: fit-content;
+  }
+  .imgandpara {
+    padding:3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .paragraph {
+    align-items: center;
+    text-align: center;
+  }
+
+  .btns {
+    height: 2.7rem;
+    font-size: 1.3rem;
+    padding: 8px;
+    margin: auto;
+  }
+
+  .home-img {
+    height: 30rem;
+    width: 30rem;
+  }
+}
+
+@media (min-width: 781px) and (max-width: 1000px) {
+   .homecontainer{
+    height: fit-content;
+   }
+  .imgandpara {
+    padding-top:3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .paragraph {
+    align-items: center;
+    text-align: center;
+  }
+
+  .btns {
+    height: 3rem;
+    font-size: 1..5rem;
+    padding: 4px;
+    margin: auto;
+  }
+
+  .home-img {
+    height: 40rem;
+    width: 40rem;
+  }
+}
