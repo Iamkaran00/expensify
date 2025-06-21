@@ -1,15 +1,15 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/authContext";
-import Loader from "./components/common/Loader";
-const Signin = lazy(() => import("./pages/Signin"));
+import Loader from "./components/common/Loader.jsx";
+const Signin = lazy(() => import("./pages/Signin.jsx"));
 import Notfound from "./pages/Notfound";
-const Signup = lazy(() => import("./pages/Signup"));
-const Home = lazy(() => import("./pages/Home"));
-const Income = lazy(() => import("./pages/IncomePage"));
-const DashboardPage = lazy(()=>import('./pages/DashboardPage'))
-const Expense = lazy(() => import("./pages/ExpensePage"));
-const ProtectedRoute = lazy(() => import("./ProtectedRoutes"));
+const Signup = lazy(() => import("./pages/Signup.jsx"));
+const Home = lazy(() => import("./pages/Home.jsx"));
+const Income = lazy(() => import("./pages/IncomePage.jsx"));
+const DashboardPage = lazy(()=>import('./pages/DashboardPage.jsx'))
+const Expense = lazy(() => import("./pages/ExpensePage.jsx"));
+const ProtectedRoute = lazy(() => import("./ProtectedRoutes.jsx"));
 function App() {
   return (
     <Router>

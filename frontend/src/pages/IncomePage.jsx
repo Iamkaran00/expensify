@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { toast } from "react-toastify";
-import DailyIncomeChart from "../components/incomeChart";
+import DailyIncomeChart from "../components/IncomeChart";
 import { Navbar } from "../components/Navbar";
  import { deleteIncomes } from "../service/operations/incomeservice";
 import {

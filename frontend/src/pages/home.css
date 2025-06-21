@@ -1,4 +1,4 @@
-/* === Base Styles === */
+
 .homecontainer {
   background-color: rgb(255, 255, 255);
   height: 100vh;
@@ -48,9 +48,7 @@
   transform: scale(1.07);
 }
 
-/* === Media Queries === */
-
-/* 📱 Extra Small: max-width 620px */
+ 
 @media (max-width: 620px) {
   .imgandpara {
 

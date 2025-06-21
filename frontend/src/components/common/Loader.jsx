@@ -1,5 +1,5 @@
 
-import './Loader.css';
+import './loader.css';
 const Loader = ()=>{
     return (
         <div className="he">
