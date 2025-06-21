@@ -4,7 +4,7 @@ import { getAllExpense } from "../service/operations/expenseService";
 import { getDashboardOverview } from "../service/operations/dashboard.service";
 import { getMeAPI } from "../service/operations/authAPI";
 import { Navbar } from "../components/Navbar";
-import IncomeExpenseBarChart from "../components/common/dashboardChart";
+import IncomeExpenseBarChart from "../components/common/Dashboard";
 import "./dashboard.css";
 import useNumberAnimation from "../utils/useNumbeAnimation";
 import {

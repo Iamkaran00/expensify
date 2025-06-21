@@ -4,7 +4,7 @@ import { useEffect,useState
 } from "react";
 import img from '../assets/Mar-Business_11.jpg'
 import { useNavigate } from "react-router-dom";
-import './Home.css';
+import './home.css';
 const Home = ()=>{
   const navigate = useNavigate();
  const [flag,setFlag] = useState(false);
