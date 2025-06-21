@@ -7,7 +7,7 @@ import {
   createIncome,
   getAllIncome,
 } from "../service/operations/incomeservice";
-import "./income.css";
+import "./Income.css";
 import { MdDelete } from "react-icons/md";
 import {
   FaBriefcase,
