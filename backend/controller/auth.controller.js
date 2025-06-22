@@ -7,7 +7,6 @@ const path = require("path");
 const fs = require("fs");
 const bcrypt = require("bcrypt");
 exports.signup = asyncHandler(async (req, res, next) => {
-  
   const { firstName, lastName, email, password } = req.body;
   if (!firstName || !lastName || !email || !password) {
     return next(new ErrorResponse('Fill the entries', 401));
@@ -39,11 +38,13 @@ exports.signup = asyncHandler(async (req, res, next) => {
   const data = { id: user._id, email: user.email };
   const token = jwt.sign(data, process.env.JWT_SECRET, {
     expiresIn: '7d',
-    algorithm: 'HS256', // Explicitly set
+    algorithm: 'HS256',  
   });
   console.log('Generated Token:', token);
   res.cookie('token', token, {
     httpOnly: true,
+    secure: process.env.NODE_ENV === "production", 
+  sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
   return res.status(200).json({
@@ -58,7 +59,8 @@ exports.signup = asyncHandler(async (req, res, next) => {
       profilePhoto: user.profilePhoto,
     },
   });
-});exports.signin = asyncHandler(async (req, res, next) => {
+});
+exports.signin = asyncHandler(async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password) {
     return next(new ErrorResponse('Fill entries carefully', 400));
@@ -78,7 +80,7 @@ exports.signup = asyncHandler(async (req, res, next) => {
   const payload = { email: user.email, id: user._id };
   const token = jwt.sign(payload, process.env.JWT_SECRET, {
     expiresIn: '48h',
-    algorithm: 'HS256', // Explicitly set
+    algorithm: 'HS256', 
   });
   console.log('Generated Token:', token);
   user.token = token;

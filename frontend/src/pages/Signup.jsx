@@ -77,7 +77,6 @@ const Signup = () => {
     img.src = URL.createObjectURL(file);
   };
   const validateEmail = (email) => {
-    // Basic structure check
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) return "Invalid email format";
 
