@@ -102,6 +102,8 @@ exports.signout = asyncHandler(async (req, res, next) => {
   res.clearCookie("token", {
     expires: new Date(Date.now() + 10 * 1000),
     httpOnly: true,
+    secure: process.env.NODE_ENV === "production", 
+  sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
   });
   res.status(200).json({
     success: true,
