@@ -1,6 +1,6 @@
 import axios from 'axios';
 const api = axios.create({
-  baseURL: 'https://expensify-mdi3.onrender.com',  
+  baseURL: 'https://expensify-mdi3.onrender.com/api/v1',  
   withCredentials: true,  
 });
 api.interceptors.request.use(
