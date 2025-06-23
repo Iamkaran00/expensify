@@ -1,5 +1,6 @@
 import api from "../api";
  export const registerUser = async userData =>{
+  console.log(userData);
  const response = await api.post ('/users/signup',userData,{
     headers : {
         'Content-Type' : 'multipart/form-data',
