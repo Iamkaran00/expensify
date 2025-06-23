@@ -7,6 +7,7 @@ const path = require("path");
 const fs = require("fs");
 const bcrypt = require("bcrypt");
 exports.signup = asyncHandler(async (req, res, next) => {
+  console.log(req.body);
   const { firstName, lastName, email, password } = req.body;
   if (!firstName || !lastName || !email || !password) {
     return next(new ErrorResponse('Fill the entries', 401));
