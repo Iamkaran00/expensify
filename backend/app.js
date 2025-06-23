@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://expensify-1-eks8.onrender.com',
     credentials: true,
   })
 );
