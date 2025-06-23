@@ -1,9 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-
- 
 export default defineConfig({
-  server: {
+  backend: {
     proxy: {
       '/api/v1': {
         target: 'https://expensify-6tgi.onrender.com',
