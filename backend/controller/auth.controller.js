@@ -44,8 +44,8 @@ exports.signup = asyncHandler(async (req, res, next) => {
   console.log('Generated Token:', token);
   res.cookie('token', token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production", 
-  sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
+   sameSite: 'None',
+  secure: true
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
   return res.status(200).json({
