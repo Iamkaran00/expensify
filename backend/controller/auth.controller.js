@@ -45,7 +45,7 @@ exports.signup = asyncHandler(async (req, res, next) => {
   res.cookie('token', token, {
     httpOnly: true,
    sameSite: 'None',
-  secure: true
+  secure: true,
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
   return res.status(200).json({
@@ -103,8 +103,8 @@ exports.signout = asyncHandler(async (req, res, next) => {
   res.clearCookie("token", {
     expires: new Date(Date.now() + 10 * 1000),
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production", 
-    ksameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
+  sameSite: 'None',
+  secure: true,
   });
   res.status(200).json({
     success: true,
