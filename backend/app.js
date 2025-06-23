@@ -10,7 +10,7 @@ dotenv.config();
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT =  3000;
 
 app.use(express.json());
 
@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin: 'http://localhost:5173',
     credentials: true,
   })
 );
@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
 });
 const server = () => {
   db();
-  app.listen(PORT,'0.0.0.0', () => {
+  app.listen(PORT , () => {
     console.log("Listening on port", PORT);
   });
 };
