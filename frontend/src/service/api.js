@@ -1,6 +1,6 @@
 import axios from 'axios';
 const api = axios.create({
-  baseURL: 'https://expensify-6tgi.onrender.com/api/v1',  
+  baseURL: import.meta.env.VITE_BASE_URL ,  
   withCredentials: true,  
 });
 api.interceptors.request.use(

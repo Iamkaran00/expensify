@@ -11,12 +11,14 @@ dotenv.config();
 const app = express();
 
 const PORT = process.env.PORT || 3000;
+
 app.use(express.json());
 
 app.use(cookieParser());
+
 app.use(
   cors({
-    origin: 'https://expense-tracker-expensify.vercel.app/' ,
+    origin: process.env.CLIENT_URL,
     credentials: true,
   })
 );
