@@ -174,7 +174,7 @@ const Signup = () => {
     if (formData.profilePic) {
       formPayload.append("file", formData.profilePic);
     }
-    console.log(formPayload,'this is formdata');
+    console.log(formData,'this is formdata');
     try {
       const response = await registerUser(formData);
       if (response) {
