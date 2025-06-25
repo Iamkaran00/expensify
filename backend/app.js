@@ -22,7 +22,10 @@ app.use(
     credentials: true,
   })
 );
-
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  next();
+});
 const userroutes = require("./routes/user.auth.routes");
 const categoryroutes = require("./routes/category.route");
 const incomeroutes = require("./routes/income.routes");
