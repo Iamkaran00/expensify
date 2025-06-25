@@ -176,7 +176,7 @@ const Signup = () => {
     }
     console.log(formPayload,'this is formdata');
     try {
-      const response = await registerUser(formPayload);
+      const response = await registerUser(formData);
       if (response) {
         login(response.user);
         toast.success("Account created successfully!");
