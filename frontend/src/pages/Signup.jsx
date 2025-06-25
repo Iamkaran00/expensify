@@ -175,7 +175,7 @@ const Signup = () => {
       formPayload.append("file", formData.profilePic);
     }
     try {
-      const response = await registerUser(formData);
+      const response = await registerUser(formPayload);
       if (response) {
         login(response.user);
         toast.success("Account created successfully!");
