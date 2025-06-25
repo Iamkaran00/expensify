@@ -103,12 +103,12 @@ exports.signin = asyncHandler(async (req, res, next) => {
 
  
 exports.signout = asyncHandler(async (req, res, next) => {
-  res.clearCookie("token", {
-    expires: new Date(Date.now() + 10 * 1000),
-    httpOnly: true,
+ res.clearCookie('token', {
+  httpOnly: true,
   sameSite: 'None',
   secure: true,
-  });
+  path: '/',
+});
   res.status(200).json({
     success: true,
     data: {},
