@@ -12,4 +12,4 @@ Tech Stack ----
 
 Deployed On Render(Frontend & Backend).
 
-🌐 Website---> (https://expensify-1-0oc2.onrender.com)
+🌐 Website---> https://expensify-1-0oc2.onrender.com
