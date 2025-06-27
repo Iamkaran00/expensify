@@ -56,7 +56,7 @@ const monthYear = now.toLocaleDateString('en-US', {
   year: 'numeric',
 });
 
-console.log(monthYear); 
+
 
   const options = {
     responsive: true,
