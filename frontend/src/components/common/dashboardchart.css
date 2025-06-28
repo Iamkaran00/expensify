@@ -207,7 +207,7 @@
 @media (max-width: 991px) and (min-width: 781px) {
   .chart-container {
     width: 100%;
-    max-width: 35rem;
+    max-width: 38rem;
     height: 24rem;
     padding: 24px;
     margin: 0 auto;
@@ -250,7 +250,7 @@
 @media (max-width: 780px) and (min-width: 621px) {
   .chart-container {
     width: 100%;
-    max-width: 39rem;
+    max-width: 35rem;
     height: 25rem;
     padding: 20px;
     margin: 0 auto;
@@ -301,12 +301,12 @@
   }
 }
 
-/* Mobile (480px to 575px) */
-@media (max-width: 620px)   {
+ 
+@media (max-width: 580px)   {
   .chart-container {
-    width: 101%;
-    max-width: 38rem;
-    height: 25rem;
+    
+    width: 30rem;
+    height: 20rem;
     padding: 16px;
     margin: 0 auto;
     border-radius: 12px;
