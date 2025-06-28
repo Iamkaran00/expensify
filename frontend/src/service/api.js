@@ -17,7 +17,6 @@ api.interceptors.response.use(
     const { config, response } = error;
     const publicEndpoints = ['/signin', '/signup','/'];
     if (response?.status === 401 && !publicEndpoints.includes(config.url)) {
-      console.log('401 error, redirecting to /');
       window.dispatchEvent(new CustomEvent('auth-redirect', { detail: { path: '/' } }));
       return Promise.reject(error);
     }
