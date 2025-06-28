@@ -121,7 +121,7 @@ p {
   flex-direction: column;
   gap:1rem;
  }
-@media(max-width:620px){
+@media(max-width:580px){
 .nav-parent{
  height:80px;
  width:100%;
@@ -137,7 +137,7 @@ p {
 }
 .container2{
   flex-direction: row;
-  gap:9px;
+  gap:6px;
   position: relative;
   top:1.4rem;
   align-items: center;
@@ -148,12 +148,12 @@ p {
 .btn{
   width:fit-content;
   height:fit-content;
-  font-size:0.9rem;
-  padding:6px 7px;
+  font-size:0.r7em;
+  padding:4px 5x;
 }
 .profileimg{
-  height:4rem;
-  width:4rem;
+  height:3.5rem;
+  width:3.5rem;
  
   border-radius: 50%;
 
@@ -162,7 +162,7 @@ p {
   flex-direction: row;
 }
 .logoutbtn{
-  width:5.2rem;
+  width:5rem;
   min-height:1.5rem;  
   border-radius: 10%;
   position: relative;
@@ -174,7 +174,7 @@ p {
 }
  
 }
-@media (min-width:621px ) and (max-width:780px){
+@media (min-width:581px ) and (max-width:780px){
    .nav-parent{
  height:90px;
  width:100%;
