@@ -3,7 +3,7 @@ import './loader.css';
 const Loader = ()=>{
     return (
         <div className="he">
-            <p style={{fontSize:"2.5rem",fontFamily :"cursive"}}>Loading...</p>
+            <p style={{fontSize:"2.5rem",fontFamily :"sans-serif"}}>Loading...</p>
         </div>
     )
 }
