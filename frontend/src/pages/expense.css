@@ -199,7 +199,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
-@media (max-width: 620px) {
+@media (max-width: 580px) {
   .expenseContainer {
     gap: 0.4rem;
     flex-direction: column;
@@ -294,7 +294,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 }
 
-@media(min-width: 620px) and (max-width: 780px) {
+@media(min-width: 581px) and (max-width: 780px) {
   .expenseContainer {
     gap: 0.4rem;
     flex-direction: column;
