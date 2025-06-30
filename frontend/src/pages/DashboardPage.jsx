@@ -202,7 +202,7 @@ const DashboardPage = () => {
       <Navbar />
       <div className="right-div">
         <p className="name">
-          Good {time} {userName}!
+          Good {time} ,{userName}
         </p>
         <div className="parent-money-div">
           <div className="boxes">
