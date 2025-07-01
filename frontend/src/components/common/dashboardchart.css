@@ -1,3 +1,4 @@
+/* Base styles (applied for all screens, default for >1200px) */
 .chart-container {
   width: 45rem;
   height: 25rem;
@@ -13,17 +14,17 @@
   justify-content: center;
   flex-direction: column;
   font-family: 'Inter', sans-serif;
-  transition: all 0.3s linear; /* Fixed: Removed double semicolon */
+  transition: all 0.3s ease-in-out; /* Updated to match dashboard-container */
 }
 
 .chart-container:hover {
   transform: scale(1.03);
-  box-shadow: 2px 2px black;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Updated to match dashboard-container */
 }
 
 .chart-container::before {
-  content: ''; /* Added required content property */
-  position: absolute; /* Added positioning */
+  content: '';
+  position: absolute;
   top: -50px;
   right: -50px;
   width: 100px;
@@ -32,8 +33,8 @@
 }
 
 .chart-container::after {
-  content: ''; /* Added required content property */
-  position: absolute; /* Added positioning */
+  content: '';
+  position: absolute;
   bottom: -30px;
   left: -30px;
   width: 60px;
@@ -46,6 +47,7 @@
   margin-bottom: 32px;
   position: relative;
   z-index: 1;
+  font-size: 1.8rem; /* Added for consistency */
 }
 
 .custom-tooltip {
@@ -170,199 +172,68 @@
   color: #dc2626;
 }
 
-/* Large Desktop (1200px and up) */
-@media (min-width: 1200px) {
-  .chart-container {
-    width: 50rem;
-    height: 28rem;
-    padding: 40px;
-  }
-  
-  .chart-title {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-  }
-  
-  .custom-legend {
-    gap: 32px;
-    margin-top: 24px;
-  }
-}
-
-/* Medium Desktop (992px to 1199px) */
-@media (max-width: 1199px) and (min-width: 992px) {
-  .chart-container {
-    width: 42rem;
-    height: 24rem;
-    padding: 28px;
-  }
-  
-  .chart-title {
-    font-size: 1.6rem;
-    margin-bottom: 28px;
-  }
-}
-
-/* Tablet (768px to 991px) */
-@media (max-width: 991px) and (min-width: 781px) {
+/* Mobile First - Extra Small Devices (phones, up to 599px) */
+@media screen and (max-width: 599px) {
   .chart-container {
     width: 100%;
-    max-width: 38rem;
-    height: 24rem;
-    padding: 24px;
-    margin: 0 auto;
-  }
-  
-  .chart-title {
-    font-size: 1.4rem;
-    margin-bottom: 24px;
-  }
-  
-  .custom-legend {
-    gap: 20px;
-    margin-top: 16px;
-  }
-  
-  .legend-item {
-    padding: 6px 12px;
-  }
-  
-  .legend-text {
-    font-size: 11px;
-  }
-  
-  .custom-tooltip {
-    min-width: 180px;
-    padding: 12px;
-  }
-  
-  .tooltip-date {
-    font-size: 13px;
-    margin-bottom: 10px;
-  }
-  
-  .tooltip-amount {
-    font-size: 12px;
-  }
-}
-
-/* Small Tablet (576px to 767px) */
-@media (max-width: 780px) and (min-width: 621px) {
-  .chart-container {
-    width: 100%;
-    max-width: 35rem;
-    height: 25rem;
-    padding: 20px;
-    margin: 0 auto;
-    border-radius: 16px;
-  }
-  
-  .chart-title {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-  }
-  
-  .custom-legend {
-    gap: 16px;
-    margin-top: 12px;
-    flex-wrap: wrap;
-  }
-  
-  .legend-item {
-    padding: 6px 10px;
-  }
-  
-  .legend-dot {
-    width: 10px;
-    height: 10px;
-    margin-right: 6px;
-  }
-  
-  .legend-text {
-    font-size: 10px;
-  }
-  
-  .custom-tooltip {
-    min-width: 160px;
-    padding: 10px;
-  }
-  
-  .tooltip-date {
-    font-size: 12px;
-    margin-bottom: 8px;
-  }
-  
-  .tooltip-amount {
-    font-size: 11px;
-  }
-  
-  .tooltip-categories {
-    font-size: 10px;
-  }
-}
-
- 
-@media (max-width: 580px)   {
-  .chart-container {
-    
-    width: 30rem;
+    max-width: 30rem;
     height: 20rem;
     padding: 16px;
     margin: 0 auto;
     border-radius: 12px;
   }
-  
+
   .chart-title {
     font-size: 1.2rem;
     margin-bottom: 16px;
   }
-  
+
   .custom-legend {
     gap: 12px;
     margin-top: 10px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .legend-item {
     padding: 5px 8px;
   }
-  
+
   .legend-dot {
     width: 8px;
     height: 8px;
     margin-right: 5px;
   }
-  
+
   .legend-text {
     font-size: 9px;
   }
-  
+
   .custom-tooltip {
     min-width: 140px;
     padding: 8px;
   }
-  
+
   .tooltip-date {
     font-size: 11px;
     margin-bottom: 6px;
   }
-  
+
   .tooltip-amount {
     font-size: 10px;
   }
-  
+
   .tooltip-categories {
     font-size: 9px;
   }
-  
+
   .chart-container::before {
     width: 60px;
     height: 60px;
     top: -30px;
     right: -30px;
   }
-  
+
   .chart-container::after {
     width: 40px;
     height: 40px;
@@ -370,4 +241,400 @@
     left: -20px;
   }
 }
- 
+
+/* Small Devices (large phones, tablets, 600px - 768px) */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .chart-container {
+    width: 100%;
+    max-width: 35rem;
+    height: 22rem;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 16px;
+  }
+
+  .chart-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .custom-legend {
+    gap: 16px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .legend-item {
+    padding: 6px 10px;
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+  }
+
+  .legend-text {
+    font-size: 10px;
+  }
+
+  .custom-tooltip {
+    min-width: 160px;
+    padding: 10px;
+  }
+
+  .tooltip-date {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .tooltip-amount {
+    font-size: 11px;
+  }
+
+  .tooltip-categories {
+    font-size: 10px;
+  }
+
+  .chart-container::before {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    right: -40px;
+  }
+
+  .chart-container::after {
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+    left: -25px;
+  }
+}
+
+/* Medium Devices (tablets, small laptops, 769px - 992px) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .chart-container {
+    width: 100%;
+    max-width: 38rem;
+    height: 24rem;
+    padding: 24px;
+    margin: 0 auto;
+    border-radius: 16px;
+  }
+
+  .chart-title {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+  }
+
+  .custom-legend {
+    gap: 20px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    padding: 6px 12px;
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+  }
+
+  .legend-text {
+    font-size: 11px;
+  }
+
+  .custom-tooltip {
+    min-width: 180px;
+    padding: 12px;
+  }
+
+  .tooltip-date {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .tooltip-amount {
+    font-size: 12px;
+  }
+
+  .tooltip-categories {
+    font-size: 11px;
+  }
+
+  .chart-container::before {
+    width: 90px;
+    height: 90px;
+    top: -45px;
+    right: -45px;
+  }
+
+  .chart-container::after {
+    width: 55px;
+    height: 55px;
+    bottom: -27px;
+    left: -27px;
+  }
+}
+
+/* Large Devices (desktops, laptops, 993px - 1200px) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .chart-container {
+    width: 42rem;
+    height: 24rem;
+    padding: 28px;
+    border-radius: 18px;
+  }
+
+  .chart-title {
+    font-size: 1.6rem;
+    margin-bottom: 28px;
+  }
+
+  .custom-legend {
+    gap: 24px;
+    margin-top: 20px;
+  }
+
+  .legend-item {
+    padding: 8px 14px;
+  }
+
+  .legend-dot {
+    width: 11px;
+    height: 11px;
+    margin-right: 7px;
+  }
+
+  .legend-text {
+    font-size: 11px;
+  }
+
+  .custom-tooltip {
+    min-width: 190px;
+    padding: 14px;
+  }
+
+  .tooltip-date {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .tooltip-amount {
+    font-size: 12px;
+  }
+
+  .tooltip-categories {
+    font-size: 11px;
+  }
+
+  .chart-container::before {
+    width: 95px;
+    height: 95px;
+    top: -47px;
+    right: -47px;
+  }
+
+  .chart-container::after {
+    width: 58px;
+    height: 58px;
+    bottom: -29px;
+    left: -29px;
+  }
+}
+
+/* Extra Large Devices (large desktops, > 1200px) */
+@media screen and (min-width: 1201px) {
+  .chart-container {
+    width: 50rem;
+    height: 28rem;
+    padding: 40px;
+  }
+
+  .chart-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .custom-legend {
+    gap: 32px;
+    margin-top: 24px;
+  }
+
+  .legend-item {
+    padding: 8px 16px;
+  }
+
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+  }
+
+  .legend-text {
+    font-size: 12px;
+  }
+
+  .custom-tooltip {
+    min-width: 200px;
+    padding: 16px;
+  }
+
+  .tooltip-date {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .tooltip-amount {
+    font-size: 13px;
+  }
+
+  .tooltip-categories {
+    font-size: 11px;
+  }
+}
+
+/* Landscape Orientation for Mobile/Tablet */
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .chart-container {
+    width: 100%;
+    max-width: 32rem;
+    height: 18rem;
+    padding: 12px;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .chart-title {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .custom-legend {
+    gap: 10px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    padding: 4px 8px;
+  }
+
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+  }
+
+  .legend-text {
+    font-size: 9px;
+  }
+
+  .custom-tooltip {
+    min-width: 120px;
+    padding: 6px;
+  }
+
+  .tooltip-date {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  .tooltip-amount {
+    font-size: 9px;
+  }
+
+  .tooltip-categories {
+    font-size: 8px;
+  }
+
+  .chart-container::before {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    right: -25px;
+  }
+
+  .chart-container::after {
+    width: 30px;
+    height: 30px;
+    bottom: -15px;
+    left: -15px;
+  }
+}
+
+/* High DPI Displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi),
+       screen and (min-resolution: 2dppx) {
+  .chart-container,
+  .custom-tooltip,
+  .legend-item {
+    border-width: 1px;
+  }
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .chart-container {
+    transition: none;
+  }
+
+  .chart-container:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .chart-container {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: 1px solid black !important;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+
+  .chart-title,
+  .tooltip-date,
+  .tooltip-amount,
+  .tooltip-categories,
+  .legend-text {
+    color: black !important;
+  }
+
+  .tooltip-item.income,
+  .tooltip-item.expense,
+  .legend-item.income,
+  .legend-item.expense {
+    background: none !important;
+    border: 1px solid black !important;
+  }
+
+  .tooltip-dot.income,
+  .legend-dot.income {
+    background: #000 !important;
+  }
+
+  .tooltip-dot.expense,
+  .legend-dot.expense {
+    background: #000 !important;
+  }
+
+  .custom-tooltip {
+    background: white !important;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+  }
+
+  .chart-container::before,
+  .chart-container::after {
+    display: none;
+  }
+}
