@@ -247,7 +247,7 @@
   .chart-container {
     width: 100%;
     max-width: 40rem;
-    height: 26rem;
+    height: 29rem;
     padding: 20px;
     margin: 0 auto;
     border-radius: 16px;
@@ -317,7 +317,7 @@
   .chart-container {
     width: 100%;
     max-width: 45rem;
-    height: 28rem;
+    height: 30rem;
     padding: 24px;
     margin: 0 auto;
     border-radius: 16px;
@@ -385,7 +385,7 @@
 @media screen and (min-width: 993px) and (max-width: 1200px) {
   .chart-container {
     width: 46rem;
-    height: 30rem;
+    height: 32rem;
     padding: 28px;
     border-radius: 18px;
   }
@@ -451,7 +451,7 @@
 @media screen and (min-width: 1201px) {
   .chart-container {
     width: 50rem;
-    height: 28rem;
+    height: 32rem;
     padding: 40px;
   }
 
