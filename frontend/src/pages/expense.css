@@ -1,5 +1,6 @@
-.expenseContainer{
-     color: black;
+/* Base styles (applied for all screens, default for >1200px) */
+.expenseContainer {
+  color: black;
   display: flex;
   justify-content: space-between;
   background-color: rgb(255, 255, 255);
@@ -9,8 +10,9 @@
   height: 100vh;
   width: 100vw;
 }
-.right-div-expense{
-     width: 81%;
+
+.right-div-expense {
+  width: 81%;
   padding-top: 1rem;
   display: flex;
   background-color: #ffa7f2;
@@ -21,8 +23,9 @@
   flex-direction: column;
   height: 100%;
 }
-.formandchartexpense{
-width: 100%;
+
+.formandchartexpense {
+  width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -31,35 +34,39 @@ width: 100%;
   justify-content: space-between;
   align-items: center;
 }
-.expense-box{
-  height:fit-content;
-  width:40%;
-  gap:0.5rem;
+
+.expense-box {
+  height: fit-content;
+  width: 40%;
+  gap: 0.5rem;
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: column;
 }
-.expense-form{
+
+.expense-form {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
- background-color: #fa243d;
+  background-color: #fa243d;
   flex-direction: column;
-  padding:1rem;
+  padding: 1rem;
   border-radius: 9px;
   min-height: 26rem;
 }
-form{
-    display: flex;
+
+form {
+  display: flex;
   align-items: start;
-  width:100%;
+  width: 100%;
   justify-content: center;
   flex-direction: column;
   min-height: 26rem;
 }
-.inputdivs{
+
+.inputdivs {
   display: flex;
   align-items: start;
   flex-direction: column;
@@ -68,11 +75,13 @@ form{
   height: fit-content;
   width: 100%;
 }
+
 label {
   font-size: 1.4rem;
   font-weight: 400;
   color: rgb(255, 255, 255);
 }
+
 .inputdivs > input {
   width: 100%;
   height: 2.4rem;
@@ -84,15 +93,18 @@ label {
   color: rgb(255, 255, 255);
   transition: all 0.2s linear;
 }
+
 .inputdivs > input:hover {
   transform: scale(1.02);
 }
+
 .inputdivs > input::placeholder {
   color: rgb(255, 255, 255);
   opacity: 1;
 }
-.total-expense{
- background-color: #fa243d;
+
+.total-expense {
+  background-color: #fa243d;
   height: 10rem;
   display: flex;
   border-radius: 10px;
@@ -103,18 +115,20 @@ label {
   width: 100%;
   transition: all 0.3s linear;
 }
+
 .total-expense:hover {
   transform: scale(1.03);
-   
   background-color: #ff0000;
   border: 2px solid rgb(255, 255, 255);
 }
+
 .dowhitess {
   font-size: 2rem;
   color: rgb(255, 255, 255);
 }
+
 .selecttagexpense {
- background-color: rgb(255, 102, 102);
+  background-color: rgb(255, 102, 102);
   border-style: none;
   height: 2.5rem;
   padding: 9px;
@@ -123,35 +137,39 @@ label {
   width: 13rem;
   font-size: 1.2rem;
 }
- 
-.submit-expense-button{
-  width:100%;
+
+.submit-expense-button {
+  width: 100%;
   background-color: rgb(199, 16, 16);
-  height:3rem;
-  border-radius:10px;
+  height: 3rem;
+  border-radius: 10px;
   transition: transform 0.2s linear;
-  border-style:none;
-  font-size:1.2rem;
+  border-style: none;
+  font-size: 1.2rem;
 }
-.submit-expense-button:hover{
+
+.submit-expense-button:hover {
   transform: scale(1.05);
   background-color: #7c1313;
 }
-.error-message{
-  font-size:1.2rem;
-  color:rgb(88, 0, 0);
+
+.error-message {
+  font-size: 1.2rem;
+  color: rgb(88, 0, 0);
 }
-.allexpense{
-  width:100%;
-  height:fit-content;
-  display:flex;
+
+.allexpense {
+  width: 100%;
+  height: fit-content;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  padding:2rem;
-  gap:2rem;
+  padding: 2rem;
+  gap: 2rem;
   justify-content: center;
 }
-.insideallexpense{
+
+.insideallexpense {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -160,13 +178,15 @@ label {
   height: fit-content;
   width: 100%;
   gap: 1.4rem;
-     transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
-.expenseinfobox{
-    min-height: 8rem;
+
+.expenseinfobox {
+  min-height: 8rem;
   padding: 1rem;
   flex-direction: column;
-  gap: 1rem;text-align: start;
+  gap: 1rem;
+  text-align: start;
   border-radius: 20px;
   min-width: 18rem;
   background-color: #ff0000;
@@ -174,33 +194,39 @@ label {
   overflow: hidden;
   transition: all 0.4s linear;
 }
-.expenseinfobox:hover{
-   background-color: #fc4444;
-   transform: scale(1.04);
+
+.expenseinfobox:hover {
+  background-color: #fc4444;
+  transform: scale(1.04);
 }
-.iconsandtitle{
-  width:100%;
+
+.iconsandtitle {
+  width: 100%;
   display: flex;
-  align-items:center;
-  color:white;
+  align-items: center;
+  color: white;
   justify-content: start;
-  gap:1rem;
+  gap: 1rem;
 }
-.iconsandtitle>p{
-  color:white;
-  font-size:1.3rem;
+
+.iconsandtitle > p {
+  color: white;
+  font-size: 1.3rem;
 }
-.dowhitess{
-    font-size: 2.2rem;
+
+.dowhitess {
+  font-size: 2.2rem;
   color: rgb(255, 255, 255);
 }
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-@media (max-width: 580px) {
+/* Extra-small devices (phones, ≤600px) */
+@media only screen and (max-width: 600px) {
   .expenseContainer {
     gap: 0.4rem;
     flex-direction: column;
@@ -220,7 +246,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .expense-box {
-    width: 80%;
+    width: 90%;
   }
 
   .total-expense {
@@ -231,7 +257,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .expense-form {
-    width:80%;
+    width: 90%;
     padding: 1rem;
     min-height: 24rem;
   }
@@ -281,8 +307,8 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .expenseinfobox {
-  
-    max-width:12rem;
+    max-width: 100%;
+    min-width: 12rem;
     min-height: 7rem;
   }
 
@@ -295,7 +321,8 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 }
 
-@media(min-width: 581px) and (max-width: 780px) {
+/* Small devices (large phones, portrait tablets, 601px–768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
   .expenseContainer {
     gap: 0.4rem;
     flex-direction: column;
@@ -315,7 +342,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .expense-box {
-    width: 80%;
+    width: 85%;
   }
 
   .total-expense {
@@ -325,7 +352,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .expense-form {
-    width: 100%;
+    width: 85%;
     padding: 1.5rem;
     min-height: 25rem;
   }
@@ -343,6 +370,11 @@ input[type="number"]::-webkit-inner-spin-button {
     max-width: 15rem;
   }
 
+  .submit-expense-button {
+    height: 2.8rem;
+    font-size: 1.2rem;
+  }
+
   .allexpense {
     padding: 1.5rem;
     gap: 1.5rem;
@@ -354,23 +386,29 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .expenseinfobox {
-    width: 16rem;
     flex: 1 1 calc(50% - 0.6rem);
     max-width: calc(50% - 0.6rem);
+    min-width: 14rem;
   }
 }
 
-@media(min-width: 781px) and (max-width: 1000px) {
+/* Medium devices (landscape tablets, small laptops, 769px–992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .expenseContainer {
+    gap: 0.8rem;
+    flex-direction: row;
+    height: 100vh;
+  }
+
   .right-div-expense {
-    width: 100%;
+    width: 75%;
     padding: 1rem;
-    flex-direction: column;
   }
 
   .formandchartexpense {
-    padding: 1.5rem;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 1.5rem;
   }
 
   .expense-box {
@@ -378,13 +416,33 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .total-expense {
-    width: 85%;
-    
+    width: 100%;
+    height: 9rem;
+    padding: 1.5rem;
   }
 
   .expense-form {
-    width: 85%;
-    max-width:45rem;
+    width: 80%;
+    max-width: 35rem;
+    padding: 1.5rem;
+  }
+
+  form {
+    min-height: 25rem;
+  }
+
+  .inputdivs {
+    min-height: 5.5rem;
+  }
+
+  .selecttagexpense {
+    width: 100%;
+    max-width: 14rem;
+  }
+
+  .submit-expense-button {
+    height: 2.8rem;
+    font-size: 1.2rem;
   }
 
   .allexpense {
@@ -398,8 +456,99 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .expenseinfobox {
-    min-width: 16rem;
     flex: 1 1 calc(33.333% - 0.8rem);
     max-width: calc(33.333% - 0.8rem);
+    min-width: 16rem;
+  }
+}
+
+/* Large devices (desktops, laptops, 993px–1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .expenseContainer {
+    gap: 1rem;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .right-div-expense {
+    width: 78%;
+    padding: 1rem;
+  }
+
+  .formandchartexpense {
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .expense-box {
+    width: 45%;
+  }
+
+  .total-expense {
+    width: 100%;
+    height: 9.5rem;
+    padding: 1.5rem;
+  }
+
+  .expense-form {
+    width: 100%;
+    max-width: 30rem;
+    padding: 1.5rem;
+  }
+
+  .allexpense {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .insideallexpense {
+    gap: 1.2rem;
+  }
+
+  .expenseinfobox {
+    flex: 1 1 calc(33.333% - 0.8rem);
+    max-width: calc(33.333% - 0.8rem);
+    min-width: 18rem;
+  }
+}
+
+/* Extra-large devices (large desktops, >1200px) */
+@media only screen and (min-width: 1201px) {
+  /* Base styles are sufficient, but adding minor tweaks for larger screens */
+  .expenseContainer {
+    gap: 1.2rem;
+  }
+
+  .right-div-expense {
+    width: 81%;
+  }
+
+  .formandchartexpense {
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .expense-box {
+    width: 40%;
+  }
+
+  .expense-form {
+    width: 100%;
+    max-width: 40rem;
+  }
+
+  .allexpense {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .insideallexpense {
+    gap: 1.4rem;
+  }
+
+  .expenseinfobox {
+    min-width: 18rem;
+    max-width: 22rem;
   }
 }
