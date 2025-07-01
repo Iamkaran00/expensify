@@ -4,11 +4,12 @@
   display: flex;
   justify-content: space-between;
   background-color: rgb(255, 255, 255);
-  align-items: start;
+  align-items: flex-start;
   flex-direction: row;
   gap: 1.2rem;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .right-div-income {
@@ -17,7 +18,7 @@
   display: flex;
   background-color: #ffa7f2;
   text-align: center;
-  justify-content: start;
+  justify-content: flex-start;
   padding-bottom: 1rem;
   overflow-y: auto;
   flex-direction: column;
@@ -59,7 +60,7 @@
 
 form {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   flex-direction: column;
@@ -68,7 +69,7 @@ form {
 
 .inputdiv {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   flex-direction: column;
   min-height: 6rem;
   justify-content: center;
@@ -91,7 +92,7 @@ label {
   border-radius: 10px;
   font-size: 1.1rem;
   color: rgb(255, 255, 255);
-  transition: all 0.2s linear;
+  transition: all 0.2s ease-in-out;
 }
 
 .inputdiv > input:hover {
@@ -119,12 +120,12 @@ input[type="number"]::-webkit-inner-spin-button {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  transition: all 0.3s linear;
+  transition: all 0.3s ease-in-out;
 }
 
 .total-income:hover {
   transform: scale(1.03);
-  box-shadow: 2px 2px 2px black;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   background-color: #f235d5;
   border: 2px solid rgb(255, 255, 255);
 }
@@ -156,13 +157,13 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 1.4rem;
   border-style: none;
   border-radius: 10px;
-  transition: all 0.2s linear;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
 .btnincome:hover {
   transform: scale(1.02);
-  box-shadow: 2px 2px 2px black;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   border: 1px solid white;
   background-color: rgb(179, 0, 152);
 }
@@ -176,7 +177,6 @@ input[type="number"]::-webkit-inner-spin-button {
   align-items: center;
   padding: 2rem;
   flex-direction: column;
-  transition: all 0.3s linear;
 }
 
 .incomesum {
@@ -188,7 +188,6 @@ input[type="number"]::-webkit-inner-spin-button {
   height: fit-content;
   width: 100%;
   gap: 1.4rem;
-  transition: all 0.3s linear;
 }
 
 .detailofincomediv {
@@ -202,13 +201,13 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: #ff36e1d7;
   text-align: start;
   color: white;
-  transition: all 0.4s linear;
+  transition: all 0.4s ease-in-out;
 }
 
 .detailofincomediv:hover {
   background-color: #eb2fcf;
   transform: scale(1.03);
-  box-shadow: 1px 1px black;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .iconandamountdiv {
@@ -218,13 +217,107 @@ input[type="number"]::-webkit-inner-spin-button {
   color: white;
 }
 
-/* Extra-small devices (phones, ≤600px) */
-@media only screen and (max-width: 600px) {
+/* Mobile First - Extra Small Devices (phones, up to 599px) */
+@media screen and (max-width: 599px) {
   .incomeContainer {
-    gap: 0.4rem;
+    gap: 0;
     flex-direction: column;
-    height: auto;
-    justify-content: space-between;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .right-div-income {
+    width: 100%;
+    padding: 0.5rem;
+    overflow-y: visible;
+  }
+
+  .chartandform {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .income-form {
+    width: 100%;
+    max-width: none;
+  }
+
+  .incomeform {
+    width: 100%;
+    padding: 0.8rem;
+    min-height: 22rem;
+  }
+
+  form {
+    min-height: 22rem;
+  }
+
+  .inputdiv {
+    min-height: 5rem;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  .inputdiv > input {
+    height: 2rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .selecttag {
+    height: 2.2rem;
+    width: 100%;
+    max-width: none;
+    font-size: 1rem;
+    padding: 6px;
+  }
+
+  .btnincome {
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .total-income {
+    width: 100%;
+    max-width: none;
+    height: 7rem;
+    padding: 1rem;
+  }
+
+  .dowhite {
+    font-size: 1.6rem;
+  }
+
+  .incomesummary {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .incomesum {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .detailofincomediv {
+    min-width: 100%;
+    width: 100%;
+    max-width: none;
+    min-height: 6rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+/* Small Devices (large phones, tablets, 600px - 768px) */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .incomeContainer {
+    gap: 0.5rem;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
   }
 
   .right-div-income {
@@ -234,18 +327,14 @@ input[type="number"]::-webkit-inner-spin-button {
 
   .chartandform {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     padding: 1rem;
+    justify-content: space-around;
   }
 
   .income-form {
-    width: 90%;
-  }
-
-  .total-income {
-    width: 100%;
-    height: 8rem;
-    padding: 1rem;
+    width: calc(50% - 0.5rem);
+    min-width: 280px;
   }
 
   .incomeform {
@@ -259,29 +348,35 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .inputdiv {
-    min-height: 5rem;
+    min-height: 5.5rem;
   }
 
   label {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .inputdiv > input {
-    height: 2rem;
+    height: 2.2rem;
     padding: 1rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .selecttag {
-    height: 2.2rem;
     width: 100%;
+    max-width: 15rem;
     font-size: 1.1rem;
-    padding: 6px;
   }
 
   .btnincome {
     height: 2.8rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .total-income {
+    width: 100%;
+    max-width: none;
+    height: 8rem;
+    padding: 1rem;
   }
 
   .dowhite {
@@ -294,45 +389,137 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .incomesum {
+    flex-wrap: wrap;
     gap: 1rem;
-    flex-direction: column;
+    justify-content: space-around;
   }
 
   .detailofincomediv {
-    max-width: 100%;
-    min-height: 7rem;
-    min-width: 0;
+    min-width: 45%;
+    width: calc(50% - 0.5rem);
+    max-width: 300px;
+    min-height: 6rem;
+    padding: 0.8rem;
+    font-size: 1.1rem;
   }
 }
 
-/* Small devices (large phones, portrait tablets, 601px–768px) */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
+/* Medium Devices (tablets, small laptops, 769px - 992px) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
   .incomeContainer {
-    gap: 0.4rem;
-    flex-direction: column;
-    height: auto;
-    justify-content: space-between;
+    gap: 0.8rem;
+    flex-direction: row;
+    height: 100vh;
   }
 
   .right-div-income {
-    width: 100%;
+    width: 75%;
     padding: 1rem;
   }
 
   .chartandform {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.2rem;
     padding: 1.5rem;
+    justify-content: center;
   }
 
   .income-form {
-    width: 85%;
+    width: calc(50% - 0.5rem);
+    min-width: 280px;
+  }
+
+  .incomeform {
+    width: 100%;
+    padding: 1.2rem;
+    min-height: 24rem;
+  }
+
+  form {
+    min-height: 24rem;
+  }
+
+  .inputdiv {
+    min-height: 5.5rem;
+  }
+
+  label {
+    font-size: 1.3rem;
+  }
+
+  .inputdiv > input {
+    height: 2.2rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .selecttag {
+    width: 100%;
+    max-width: 14rem;
+    font-size: 1.1rem;
+  }
+
+  .btnincome {
+    height: 2.8rem;
+    font-size: 1.2rem;
   }
 
   .total-income {
     width: 100%;
+    max-width: 350px;
     height: 9rem;
+    padding: 1.2rem;
+  }
+
+  .dowhite {
+    font-size: 1.8rem;
+  }
+
+  .incomesummary {
     padding: 1.5rem;
+    gap: 1.2rem;
+  }
+
+  .incomesum {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: space-around;
+  }
+
+  .detailofincomediv {
+    min-width: 200px;
+    width: calc(50% - 0.6rem);
+    max-width: 280px;
+    min-height: 6rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Large Devices (desktops, laptops, 993px - 1200px) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .incomeContainer {
+    gap: 1rem;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .right-div-income {
+    width: 78%;
+    padding: 1.5rem;
+  }
+
+  .chartandform {
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-content: center;
+  }
+
+  .income-form {
+    width: calc(33.333% - 1rem);
+    min-width: 280px;
+    max-width: 350px;
   }
 
   .incomeform {
@@ -349,150 +536,89 @@ input[type="number"]::-webkit-inner-spin-button {
     min-height: 5.5rem;
   }
 
+  label {
+    font-size: 1.3rem;
+  }
+
+  .inputdiv > input {
+    height: 2.2rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
   .selecttag {
     width: 100%;
     max-width: 15rem;
+    font-size: 1.2rem;
   }
 
   .btnincome {
-    width: 100%;
-  }
-
-  .incomesummary {
-    padding: 1.5rem;
-    gap: 1.5rem;
-  }
-
-  .incomesum {
-    gap: 1.2rem;
-    flex-wrap: wrap;
-  }
-
-  .detailofincomediv {
-    flex: 1 1 calc(50% - 0.6rem);
-    max-width: calc(50% - 0.6rem);
-    min-width: 12rem;
-  }
-}
-
-/* Medium devices (landscape tablets, small laptops, 769px–992px) */
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-  .incomeContainer {
-    gap: 0.8rem;
-    flex-direction: row;
-    height: 100vh;
-  }
-
-  .right-div-income {
-    width: 75%;
-    padding: 1rem;
-  }
-
-  .chartandform {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem;
-  }
-
-  .income-form {
-    width: 100%;
-    max-width: 30rem;
-  }
-
-  .incomeform {
-    width: 100%;
-    padding: 1.5rem;
+    height: 2.8rem;
+    font-size: 1.2rem;
   }
 
   .total-income {
     width: 100%;
-    height: 9rem;
-  }
-
-  .incomesummary {
-    padding: 1.5rem;
-    gap: 1.5rem;
-  }
-
-  .incomesum {
-    gap: 1.2rem;
-    flex-wrap: wrap;
-  }
-
-  .detailofincomediv {
-    flex: 1 1 calc(33.333% - 0.8rem);
-    max-width: calc(33.333% - 0.8rem);
-    min-width: 16rem;
-  }
-}
-
-/* Large devices (desktops, laptops, 993px–1200px) */
-@media only screen and (min-width: 993px) and (max-width: 1200px) {
-  .incomeContainer {
-    gap: 1rem;
-    flex-direction: row;
-    height: 100vh;
-  }
-
-  .right-div-income {
-    width: 78%;
-    padding: 1rem;
-  }
-
-  .chartandform {
-    flex-direction: row;
-    gap: 1.5rem;
-    padding: 1.5rem;
-  }
-
-  .income-form {
-    width: 25rem;
-  }
-
-  .incomeform {
-    width: 100%;
-    padding: 1.5rem;
-  }
-
-  .total-income {
-    width: 100%;
+    max-width: 350px;
     height: 9.5rem;
+    padding: 1.5rem;
+  }
+
+  .dowhite {
+    font-size: 1.9rem;
   }
 
   .incomesummary {
-    padding: 1.5rem;
+    padding: 2rem;
     gap: 1.5rem;
   }
 
   .incomesum {
-    gap: 1.2rem;
+    gap: 1.5rem;
+    justify-content: center;
   }
 
   .detailofincomediv {
-    flex: 1 1 calc(33.333% - 0.8rem);
-    max-width: calc(33.333% - 0.8rem);
-    min-width: 18rem;
+    min-width: 250px;
+    width: calc(33.333% - 1rem);
+    max-width: 300px;
+    min-height: 7rem;
+    padding: 1rem;
+    font-size: 1.2rem;
   }
 }
 
-/* Extra-large devices (large desktops, >1200px) */
-@media only screen and (min-width: 1201px) {
-  /* Base styles are sufficient, but adding minor tweaks for larger screens */
+/* Extra Large Devices (large desktops, > 1200px) */
+@media screen and (min-width: 1201px) {
   .incomeContainer {
     gap: 1.2rem;
   }
 
   .right-div-income {
     width: 81%;
+    padding: 2rem;
   }
 
   .chartandform {
-    gap: 1rem;
+    gap: 2rem;
     padding: 2rem;
   }
 
   .income-form {
     width: 27rem;
+    max-width: 400px;
+  }
+
+  .incomeform {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .total-income {
+    width: 100%;
+    max-width: 400px;
+    height: 10rem;
+    padding: 2rem;
   }
 
   .incomesummary {
@@ -501,11 +627,124 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .incomesum {
-    gap: 1.4rem;
+    gap: 2rem;
+    justify-content: center;
   }
 
   .detailofincomediv {
     min-width: 18rem;
-    max-width: 22rem;
+    width: calc(33.333% - 1.5rem);
+    max-width: 350px;
+    min-height: 8rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Landscape Orientation for Mobile/Tablet */
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .incomeContainer {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .right-div-income {
+    padding: 0.8rem;
+  }
+
+  .chartandform {
+    padding: 0.8rem;
+  }
+
+  .income-form {
+    width: calc(50% - 0.5rem);
+  }
+
+  .incomeform {
+    min-height: 20rem;
+  }
+
+  form {
+    min-height: 20rem;
+  }
+
+  .total-income {
+    height: 7rem;
+    padding: 1rem;
+  }
+
+  .dowhite {
+    font-size: 1.4rem;
+  }
+
+  .detailofincomediv {
+    min-height: 5rem;
+    padding: 0.8rem;
+  }
+
+  .inputdiv > input,
+  .selecttag,
+  .btnincome {
+    font-size: 1rem;
+  }
+}
+
+/* High DPI Displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi),
+       screen and (min-resolution: 2dppx) {
+  .incomeform,
+  .total-income,
+  .detailofincomediv {
+    border-width: 1px;
+  }
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .inputdiv > input,
+  .total-income,
+  .btnincome,
+  .detailofincomediv {
+    transition: none;
+  }
+
+  .inputdiv > input:hover,
+  .total-income:hover,
+  .btnincome:hover,
+  .detailofincomediv:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .incomeContainer {
+    background-color: white !important;
+    color: black !important;
+    height: auto;
+    overflow: visible;
+  }
+
+  .right-div-income {
+    background-color: white !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .incomeform,
+  .total-income,
+  .detailofincomediv {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+  }
+
+  .inputdiv > input,
+  .selecttag,
+  .btnincome,
+  .dowhite {
+    color: black !important;
+    text-shadow: none !important;
   }
 }
