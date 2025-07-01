@@ -256,4 +256,394 @@
     min-width: 280px;
   }
 
-  .transactio
+  .transactions-box {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .incomes,
+  .expenses {
+    min-width: 100%;
+    width: 100%;
+    max-width: none;
+    min-height: 5rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .name {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .transactions-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .money-div > p,
+  .income-div > p,
+  .expense-div > p {
+    font-size: 1.4rem;
+  }
+
+  .amountdiv {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .boxes {
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .transactions {
+    padding: 0.5rem 0;
+  }
+}
+
+/* Small Devices (large phones, tablets, 600px - 768px) */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .dashboard-container {
+    gap: 0.5rem;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .right-div {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .parent-money-div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-around;
+  }
+
+  .money-div,
+  .income-div,
+  .expense-div {
+    width: calc(50% - 0.5rem);
+    min-width: 250px;
+    height: 8rem;
+    padding: 1rem;
+  }
+
+  .transactions-box {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-around;
+  }
+
+  .incomes,
+  .expenses {
+    min-width: 45%;
+    width: 45%;
+    max-width: 300px;
+    min-height: 5.5rem;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  .name {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .transactions-title {
+    font-size: 1.6rem;
+  }
+
+  .money-div > p,
+  .income-div > p,
+  .expense-div > p {
+    font-size: 1.6rem;
+  }
+
+  .amountdiv {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* Medium Devices (tablets, small laptops, 769px - 992px) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .dashboard-container {
+    gap: 0.8rem;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .right-div {
+    width: 75%;
+    padding: 1rem;
+  }
+
+  .parent-money-div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    justify-content: center;
+  }
+
+  .money-div,
+  .income-div,
+  .expense-div {
+    width: calc(33.333% - 1rem);
+    min-width: 200px;
+    max-width: 250px;
+    height: 9rem;
+    padding: 1.2rem;
+  }
+
+  .transactions-box {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 1rem;
+    justify-content: space-around;
+  }
+
+  .incomes,
+  .expenses {
+    min-width: 200px;
+    width: calc(50% - 0.6rem);
+    max-width: 280px;
+    min-height: 5.5rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .transactions-title {
+    font-size: 1.7rem;
+  }
+
+  .money-div > p,
+  .income-div > p,
+  .expense-div > p {
+    font-size: 1.7rem;
+  }
+
+  .amountdiv {
+    gap: 2rem;
+  }
+}
+
+/* Large Devices (desktops, laptops, 993px - 1200px) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .dashboard-container {
+    gap: 1rem;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .right-div {
+    width: 78%;
+    padding: 1.5rem;
+  }
+
+  .parent-money-div {
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-content: center;
+  }
+
+  .money-div,
+  .income-div,
+  .expense-div {
+    width: 16rem;
+    height: 9.5rem;
+    padding: 1.8rem;
+  }
+
+  .transactions-box {
+    gap: 1.5rem;
+    padding: 1.5rem;
+    justify-content: center;
+  }
+
+  .incomes,
+  .expenses {
+    min-width: 250px;
+    width: calc(33.333% - 1rem);
+    max-width: 300px;
+    min-height: 6rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .name {
+    font-size: 2.1rem;
+  }
+
+  .transactions-title {
+    font-size: 1.8rem;
+  }
+
+  .money-div > p,
+  .income-div > p,
+  .expense-div > p {
+    font-size: 1.8rem;
+  }
+
+  .amountdiv {
+    gap: 2.5rem;
+  }
+}
+
+/* Extra Large Devices (large desktops, > 1200px) */
+@media screen and (min-width: 1201px) {
+  .dashboard-container {
+    gap: 1rem;
+  }
+
+  .right-div {
+    width: 81%;
+    padding: 2rem;
+  }
+
+  .parent-money-div {
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .money-div,
+  .income-div,
+  .expense-div {
+    width: 18rem;
+    height: 10rem;
+    padding: 2rem;
+  }
+
+  .transactions-box {
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .incomes,
+  .expenses {
+    min-width: 300px;
+    width: calc(33.333% - 1.5rem);
+    max-width: 350px;
+    min-height: 6rem;
+    font-size: 1.2rem;
+  }
+
+  .name {
+    font-size: 2.2rem;
+  }
+
+  .transactions-title {
+    font-size: 2rem;
+  }
+
+  .amountdiv {
+    gap: 3.5rem;
+  }
+}
+
+/* Landscape Orientation for Mobile/Tablet */
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .dashboard-container {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .parent-money-div {
+    padding: 1rem;
+  }
+
+  .money-div,
+  .income-div,
+  .expense-div {
+    height: 7rem;
+    padding: 1rem;
+  }
+
+  .money-div > p,
+  .income-div > p,
+  .expense-div > p {
+    font-size: 1.4rem;
+  }
+}
+
+/* High DPI Displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi),
+       screen and (min-resolution: 2dppx) {
+  .money-div,
+  .income-div,
+  .expense-div,
+  .incomes,
+  .expenses {
+    border-width: 1px;
+  }
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .money-div,
+  .income-div,
+  .expense-div,
+  .incomes,
+  .expenses {
+    transition: none;
+  }
+
+  .money-div:hover,
+  .income-div:hover,
+  .expense-div:hover,
+  .incomes:hover,
+  .expenses:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .dashboard-container {
+    background-color: white !important;
+    color: black !important;
+    height: auto;
+    overflow: visible;
+  }
+
+  .right-div {
+    background-color: white !important;
+    width: 100% !important;
+  }
+
+  .money-div,
+  .income-div,
+  .expense-div,
+  .incomes,
+  .expenses {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+  }
+
+  .money-div > p,
+  .income-div > p,
+  .expense-div > p,
+  .incomes > p,
+  .expenses > p {
+    color: black !important;
+    text-shadow: none !important;
+  }
+}
