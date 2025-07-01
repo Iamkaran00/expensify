@@ -176,8 +176,8 @@
 @media screen and (max-width: 599px) {
   .chart-container {
     width: 100%;
-    max-width: 35rem;
-    height: 24rem;
+    max-width: 24rem;
+    height: 16rem;
     padding: 16px;
     margin: 0 auto;
     border-radius: 12px;
