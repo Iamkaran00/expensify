@@ -24,10 +24,11 @@
   background-color: #ffa7f2;
   align-items: center;
   justify-content: flex-start;
-  overflow-y: auto;
+ 
   flex-direction: column;
   min-height: 100vh;
   padding: 1rem;
+    overflow-y:auto;
 }
 
 .parent-money-div {
