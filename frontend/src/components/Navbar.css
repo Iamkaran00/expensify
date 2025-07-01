@@ -1,3 +1,4 @@
+/* Base styles (applied for all screens, default for >1200px) */
 .nav-parent {
   height: 100vh;
   width: 20rem;
@@ -37,8 +38,7 @@ p {
 
 .title {
   font-size: 2.5rem;
-   
-  font-family:  "cursive"
+  font-family: "cursive";
 }
 
 .btn {
@@ -60,7 +60,7 @@ p {
 }
 
 .btn:hover {
-  transform: scale(1.05);  
+  transform: scale(1.05);
   box-shadow: 1px 1.5px 1.8px black;
   border: 1px solid white;
 }
@@ -88,7 +88,7 @@ p {
   color: black;
   font-size: 1.4rem;
   font-weight: 545;
-  height: 3rem; 
+  height: 3rem;
   background-color: rgb(255, 255, 255);
   color: rgb(255, 0, 0);
   width: 14rem;
@@ -113,167 +113,301 @@ p {
   align-items: center;
   flex-direction: column;
 }
- .anotherdiv{
+
+.anotherdiv {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  gap:1rem;
- }
-@media(max-width:580px){
-.nav-parent{
- height:80px;
- width:100%;
- flex-direction: row;
- align-items: center;
- justify-content: space-around;
- 
+  gap: 1rem;
 }
-.nav-buttons-div{
-  flex-direction: row;
-   width:fit-content;
-   align-items: center;
-}
-.container2{
-  flex-direction: row;
-  gap:6px;
-  position: relative;
-  top:1.4rem;
-  align-items: center;
-}
-.title{
-  display: none;
-}
-.btn{
-  width:fit-content;
-  height:fit-content;
-  font-size:0.r7em;
-  padding:4px 5x;
-}
-.profileimg{
-  height:3.5rem;
-  width:3.5rem;
- 
-  border-radius: 50%;
 
-}
-.anotherdiv{
-  flex-direction: row;
-}
-.logoutbtn{
-  width:5rem;
-  min-height:1.5rem;  
-  border-radius: 10%;
-  position: relative;
-  top:1.4rem;
-  font-size:0.9rem;
-}
-.emails{
-  display: none;
-}
- 
-}
-@media (min-width:581px ) and (max-width:780px){
-   .nav-parent{
- height:90px;
- width:100%;
- flex-direction: row;
- align-items: center;
- justify-content: space-around;
-}
-.anotherdiv{
-  flex-direction: row;
-}
-.nav-buttons-div{
-  flex-direction: row;
-   width:fit-content;
-   align-items: center;
-}
-.container2{
-  flex-direction: row-reverse;
-  gap:9px;
-  position: relative;
-  top:1.4rem;
-  align-items: center;
-}
-.title{
-  font-size:1.5rem;
+/* Extra-small devices (phones, ≤600px) */
+@media only screen and (max-width: 600px) {
+  .nav-parent {
+    height: 80px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 0;
+  }
+
+  .nav-buttons-div {
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .container2 {
+    flex-direction: row;
+    gap: 6px;
     position: relative;
-  top:1.4rem;
-}
-.btn{
-  width:fit-content;
-  height:fit-content;
-  font-size:0.8rem;
-  padding:6px 7px;
-}
-.profileimg{
-  height:4rem;
-  width:4rem;
- 
-  border-radius: 50%;
+    top: 1rem;
+    align-items: center;
+  }
 
-}
-.logoutbtn{
-  width:fit-content;
-  min-height:2rem; 
- position: relative;
-  top:1.4rem;
-  padding:6px;
-  font-size:0.9rem;
-}
-.emails{
-  display: none;
-} 
- }
- @media (min-width:781px ) and (max-width:990px){
-   .nav-parent{
- width:14rem;
- height: 100%;
-}
-.anotherdiv{
-  flex-direction: column;
-}
-.nav-buttons-div{
-  flex-direction:column;
-   width:fit-content;
-   align-items: center;
-}
-.container2{
-  flex-direction: column;
-  gap:9px;
-  position: relative;
-  top:1.4rem;
-  align-items: center;
-}
-.title{
-  font-size:2rem;
+  .title {
+    display: none;
+  }
+
+  .btn {
+    width: fit-content;
+    height: fit-content;
+    font-size: 0.7rem;
+    padding: 4px 5px;
+    border-radius: 20px;
+  }
+
+  .profileimg {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+  }
+
+  .anotherdiv {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .logoutbtn {
+    width: 5rem;
+    min-height: 1.5rem;
+    border-radius: 10px;
     position: relative;
-  top:1.4rem;
-}
-.btn{
-  width:10rem;
-  height:fit-content;
-  font-size:0.9rem;
-  padding:6px 7px;
-}
-.profileimg{
-  height:8rem;
-  width:8rem;
-  border-radius: 50%;
+    top: 1rem;
+    font-size: 0.9rem;
+  }
 
+  .emails {
+    display: none;
+  }
 }
-.logoutbtn{
-  width:10rem;
-  min-height:2rem; 
- position: relative;
-  top:1.4rem;
-  padding:6px;
-  font-size:1rem;
+
+/* Small devices (large phones, portrait tablets, 601px–768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .nav-parent {
+    height: 90px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 0;
+  }
+
+  .nav-buttons-div {
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .container2 {
+    flex-direction: row-reverse;
+    gap: 9px;
+    position: relative;
+    top: 1.2rem;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    position: relative;
+    top: 1.2rem;
+  }
+
+  .btn {
+    width: fit-content;
+    height: fit-content;
+    font-size: 0.8rem;
+    padding: 6px 7px;
+    border-radius: 25px;
+  }
+
+  .profileimg {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+
+  .anotherdiv {
+    flex-direction: row;
+    gap: 0.7rem;
+  }
+
+  .logoutbtn {
+    width: fit-content;
+    min-height: 2rem;
+    position: relative;
+    top: 1.2rem;
+    padding: 6px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  . noct {
+    display: none;
+  }
 }
-.emails{
-  display: none;
+
+/* Medium devices (landscape tablets, small laptops, 769px–992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .nav-parent {
+    width: 14rem;
+    height: 100vh;
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+
+  .nav-buttons-div {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .container2 {
+    flex-direction: column;
+    gap: 9px;
+    position: relative;
+    top: 1.2rem;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2rem;
+    position: relative;
+    top: 1.2rem;
+  }
+
+  .btn {
+    width: 10rem;
+    height: fit-content;
+    font-size: 0.9rem;
+    padding: 6px 7px;
+    border-radius: 30px;
+  }
+
+  .profileimg {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+  }
+
+  .anotherdiv {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .logoutbtn {
+    width: 10rem;
+    min-height: 2rem;
+    position: relative;
+    top: 1.2rem;
+    padding: 6px;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+
+  .emails {
+    display: none;
+  }
 }
- 
- }
+
+/* Large devices (desktops, laptops, 993px–1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .nav-parent {
+    width: 18rem;
+    height: 100vh;
+    flex-direction: column;
+    padding-bottom: 2.5rem;
+  }
+
+  .nav-buttons-div {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.7rem;
+  }
+
+  .container2 {
+    flex-direction: column;
+    gap: 1rem;
+    position: static;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    position: static;
+  }
+
+  .btn {
+    width: 11rem;
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .profileimg {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+  }
+
+  .anotherdiv {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .logoutbtn {
+    width: 12rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    position: static;
+  }
+
+  .emails {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra-large devices (large desktops, >1200px) */
+@media only screen and (min-width: 1201px) {
+  /* Base styles are sufficient, but adding minor tweaks for larger screens */
+  .nav-parent {
+    width: 20rem;
+    padding-bottom: 3rem;
+  }
+
+  .nav-buttons-div {
+    gap: 0.7rem;
+  }
+
+  .container2 {
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    width: 12rem;
+    font-size: 1.1rem;
+  }
+
+  .profileimg {
+    height: 11rem;
+    width: 11rem;
+  }
+
+  .logoutbtn {
+    width: 14rem;
+    height: 3rem;
+    font-size: 1.4rem;
+  }
+
+  .emails {
+    font-size: 1.3rem;
+  }
+}
