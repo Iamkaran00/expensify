@@ -9,11 +9,12 @@
   gap: 1.2rem;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+ 
 }
 
 .right-div-income {
   width: 81%;
+    min-height: 100vh;
   padding-top: 1rem;
   display: flex;
   background-color: #ffa7f2;
@@ -22,7 +23,7 @@
   padding-bottom: 1rem;
   overflow-y: auto;
   flex-direction: column;
-  min-height: 100vh;
+
 }
 
 .chartandform {
