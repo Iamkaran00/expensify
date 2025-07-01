@@ -1,6 +1,6 @@
 /* Base styles (applied for all screens, default for >1200px) */
 .nav-parent {
-  min-height: 100vh;
+  height: 100vh;
   width: 20rem;
   background-color: #ffa7f2;
   color: white;
@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 3rem;
-  overflow-y:auto;
+ 
   align-items: center;
 }
 
