@@ -155,7 +155,7 @@ p {
     height: 2rem;
     font-size: 0.6rem;
     padding: 0.2rem 0.3rem;
-    border-radius: 10x;
+    border-radius: 5px;
     min-width: 45px;
   }
 
@@ -217,7 +217,7 @@ p {
     height: 2.2rem;
     font-size: 0.7rem;
     padding: 0.4rem 0.6rem;
-    border-radius: 20px;
+    border-radius: 10px;
     min-width: 70px;
   }
 
@@ -235,7 +235,7 @@ p {
     width: auto;
     height: 2.2rem;
     padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     border-radius: 8px;
     min-width: 70px;
   }
