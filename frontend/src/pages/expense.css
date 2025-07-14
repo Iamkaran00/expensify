@@ -243,7 +243,7 @@ input[type="number"]::-webkit-inner-spin-button {
   .right-div-expense {
     width: 100%;
     padding: 0.5rem;
-    overflow-y: visible;
+    overflow-y: auto;
   }
 
   .formandchartexpense {
