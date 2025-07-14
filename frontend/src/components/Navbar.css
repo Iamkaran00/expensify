@@ -152,8 +152,8 @@ p {
 
   .btn {
     width: auto;
-    height: 1rem;
-    font-size: 0.8rem;
+    height: 2rem;
+    font-size: 0.6rem;
     padding: 0.2rem 0.3rem;
     border-radius: 10x;
     min-width: 45px;
@@ -214,8 +214,8 @@ p {
 
   .btn {
     width: auto;
-    height: 1.2rem;
-    font-size: 0.8rem;
+    height: 2.2rem;
+    font-size: 0.7rem;
     padding: 0.4rem 0.6rem;
     border-radius: 20px;
     min-width: 70px;
