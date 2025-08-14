@@ -207,7 +207,7 @@ const DashboardPage = () => {
         <div className="parent-money-div">
           <div className="boxes">
             <div className={"money-div"}>
-              <p>Remaining Balance</p>
+              <p>Net Balance</p>
               <p>${animatedBalance}</p>
             </div>
 
